@@ -1,0 +1,194 @@
+<?php
+
+
+
+function cust_customizer_settings($wp_customizer){
+	$wp_customizer->add_section('cust_services',array(
+		'title' => __('Services','customizer'),
+		'priority' => '30'
+	));
+
+	$wp_customizer->add_setting('cust_services_heading',array(
+		'default' => "Mission Statement",
+		'transport' => 'refresh'  // javascript -- postMessage
+		// 'type' => 'option'  // Default - theme_mod or option
+	));
+
+	$wp_customizer->add_control('cust_services_heading_ctrl',array(
+		'label' => __('Services Heading','customizer'),
+		'section' => 'cust_services',
+		'settings' => 'cust_services_heading',
+		'type' => 'text'
+	));
+
+	$wp_customizer->add_setting('cust_services_subheading',array(
+		// 'default' => "Mission Statement",
+		'transport' => 'refresh'  // javascript -- postMessage
+		// 'type' => 'option'  // Default - theme_mod or option
+	));
+
+	$wp_customizer->add_control('cust_services_subheading_ctrl',array(
+		'label' => __('Services Description','customizer'),
+		'section' => 'cust_services',
+		'settings' => 'cust_services_subheading',
+		'type' => 'textarea'
+	));
+
+	$wp_customizer->add_setting('cust_services_display_subheading',array(
+		'default' => 1,
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_services_display_subheading_ctrl',array(
+		'label' => __('Services Description','customizer'),
+		'section' => 'cust_services',
+		'settings' => 'cust_services_display_subheading',
+		'type' => 'checkbox'
+	));
+
+
+	/*
+	* Other Controls
+	*/
+	$wp_customizer->add_section('cust_others',array(
+		'title' => __('Other Controls','customizer'),
+		'priority' => '40'
+	));
+
+	$wp_customizer->add_setting('cust_others_demo_radio',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_demo_radio_ctrl',array(
+		'label' => __('Radio Button','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_demo_radio',
+		'type' => 'radio',
+		'choices' => array(
+			'choice1' => __('Choice One','chustomizer'),
+			'choice2' => __('Choice Two','chustomizer'),
+			'choice3' => __('Choice Three','chustomizer'),
+			'choice4' => __('Choice Four','chustomizer'),
+		)
+	));
+
+
+	// Dropdown 
+	$wp_customizer->add_setting('cust_others_demo_select',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_demo_select_ctrl',array(
+		'label' => __('Dropdown','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_demo_select',
+		'type' => 'select',
+		'choices' => array(
+			'choice1' => __('Choice One','chustomizer'),
+			'choice2' => __('Choice Two','chustomizer'),
+			'choice3' => __('Choice Three','chustomizer'),
+			'choice4' => __('Choice Four','chustomizer'),
+		)
+	));
+
+
+	// Dropdown 2 
+	$wp_customizer->add_setting('cust_others_demo_pages',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_demo_pages_ctrl',array(
+		'label' => __('Available Pages','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_demo_pages',
+		'type' => 'dropdown-pages',
+		'allow_addition' => true,
+	));
+
+
+	/*For any input type supported by the html input element, simply pass the type attribute value to the type parameter when adding the control. This allows support for control types such as text, hidden, number, range, url, tel, email, search, time, date, datetime, and week, pending browser support.*/ 
+	$wp_customizer->add_setting('cust_others_html5_number',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_number_ctrl',array(
+		'label' => __('Number Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_number',
+		'type' => 'number',
+		'input_attrs' => array(
+			'min' => 10,
+			'max' => 20,
+			'step' => 2
+		)
+	));
+
+	// Range 
+	$wp_customizer->add_setting('cust_others_html5_range',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_range_ctrl',array(
+		'label' => __('Range Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_range',
+		'type' => 'range',
+		'input_attrs' => array(
+			'min' => 10,
+			'max' => 20,
+			'step' => 2
+		)
+	));
+
+	// Date 
+	$wp_customizer->add_setting('cust_others_html5_date',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_date_ctrl',array(
+		'label' => __('Date Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_date',
+		'type' => 'date',
+		'input_attrs' => array(
+			'min' => 10,
+			'max' => 20,
+			'step' => 2
+		)
+	));
+
+	// Time 
+	$wp_customizer->add_setting('cust_others_html5_time',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_time_ctrl',array(
+		'label' => __('Time Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_time',
+		'type' => 'time',
+	));
+
+	// Week 
+	$wp_customizer->add_setting('cust_others_html5_week',array(
+		'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_week_ctrl',array(
+		'label' => __('Week Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_week',
+		'type' => 'week',
+	));
+
+}
+
+add_action('customize_register', 'cust_customizer_settings');
