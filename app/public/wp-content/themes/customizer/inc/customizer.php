@@ -10,7 +10,7 @@ function cust_customizer_settings($wp_customizer){
 
 	$wp_customizer->add_setting('cust_services_heading',array(
 		'default' => "Mission Statement",
-		'transport' => 'refresh'  // javascript -- postMessage
+		'transport' => 'postMessage'  // javascript -- postMessage
 		// 'type' => 'option'  // Default - theme_mod or option
 	));
 
@@ -49,15 +49,15 @@ function cust_customizer_settings($wp_customizer){
 	// For Icon color or somthing else
 	$wp_customizer->add_setting('cust_services_icon_color',array(
 		'default' => '#22bbc0',
-		'transport' => 'refresh'
+		'transport' => 'postMessage'  // javascript -- postMessage
 	));
 
-	$wp_customizer->add_control(new WP_Customize_Color_Control($wp_customizer,'cust_icon_color_ctrl', array(
-
+	$wp_customizer->add_control(new WP_Customize_Color_Control($wp_customizer,'cust_services_icon_color_ctrl',array(
 		'label' => __('Icon Color','customizer'),
 		'section' => 'cust_services',
 		'settings' => 'cust_services_icon_color',
 	)));
+	
 
 	// How may row will be start
 	$wp_customizer->add_setting('cust_services_number_of_items',array(

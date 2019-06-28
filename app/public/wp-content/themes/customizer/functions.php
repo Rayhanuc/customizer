@@ -92,18 +92,32 @@ add_action('after_setup_theme','customizer_setup');
 function customizer_scripts() {
 	wp_enqueue_style('bootstrap-css',get_template_directory_uri().'/assets/css/bootstrap.min.css',null,'3.3.7');
 	wp_enqueue_style('font-awesome-css',get_template_directory_uri().'/assets/css/font-awesome.min.css',null,'4.7.0');
-	wp_enqueue_style('customizer-style-css',get_template_directory_uri().'/assets/css/style.css',null,'4.7.0');
+	wp_enqueue_style('cust-style',get_template_directory_uri().'/assets/css/style.css',null,'1.0');
+	wp_enqueue_style('cust-main',get_stylesheet_uri(),null,'1.0');
 
-
-
-	$services_icon_color = get_theme_mod('cust_servides_icon_color','#22bbc0');
-	$service_style = <<<EOD
-.service-icon i{    
+	$services_icon_color = get_theme_mod('cust_services_icon_color','#22bbc0');
+	$services_style =<<<EOD
+.service-icon i {    
     color: {$services_icon_color};
 }
 EOD;
+	wp_add_inline_style( 'cust-main', $services_style );
 
-wp_add_inline_style( 'customizer-style-css', $service_style );
+
+	// js file enqueue
+	wp_enqueue_script("bootstrap-js",get_theme_file_uri("/assets/js/bootstrap.min.js"),array('jquery'),'3.3.7',true);
+	wp_enqueue_script("jquery-circle-progress-js",get_theme_file_uri("/assets/js/jquery-circle-progress-1.2.2.min.js"),array('jquery'),'1.2.2',true);
+	wp_enqueue_script("owl-carousel-js",get_theme_file_uri("/assets/js/owl.carousel.min.js"),array('jquery'),'2.2.1',true);
+	wp_enqueue_script("scripts-js",get_theme_file_uri("/assets/js/scripts.js"),array('jquery'),'1.0',true);
+
+
 
 }
 add_action('wp_enqueue_scripts','customizer_scripts');
+
+
+// This file only include in customizer page
+function cust_customizer_assets(){
+	wp_enqueue_script("cust-customizer-js",get_theme_file_uri("/assets/js/customizer.js"),array('jquery','customize-preview'),'1.0',true);
+}
+add_action("customize_preview_init","cust_customizer_assets");

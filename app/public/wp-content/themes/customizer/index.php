@@ -56,7 +56,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="heading-text">
-							<h2>
+							<h2 id="service-heading">
 							<?php 
 							echo esc_html(get_theme_mod( 'cust_services_heading',__('Our Mission Statement','customizer') ));
 							// echo esc_html(get_option( 'cust_services_heading',__('Our Mission Statement','customizer') ));
@@ -184,12 +184,8 @@
 			</div>
 		</div>
 
-		<!--  All link Should be link properly -->
 
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/jquery-circle-progress-1.2.2.min.js"></script>
-		<script src="assets/js/owl.carousel.min.js"></script>
-		<script src="assets/js/scripts.js"></script>
+		
 
 		<?php wp_footer(); ?>
 	</body>

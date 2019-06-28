@@ -52,3 +52,8 @@ Stack trace:
 #9 /app/public/wp-includes/template-loader.php(78): include('/app/public/wp-...')
 #10 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
 #11 /app/public/index.php(17): require('/app in /app/public/wp-content/themes/customizer/functions.php on line 99
+[28-Jun-2019 13:51:32 UTC] PHP Parse error:  syntax error, unexpected '$wp_customizer' (T_VARIABLE) in /app/public/wp-content/themes/customizer/inc/customizer.php on line 58
+[28-Jun-2019 13:56:11 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/customizer/functions.php on line 124
+[28-Jun-2019 13:56:11 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/customizer/functions.php on line 124
+[28-Jun-2019 15:25:38 UTC] PHP Parse error:  syntax error, unexpected '$services_icon_color' (T_VARIABLE) in /app/public/wp-content/themes/customizer/functions.php on line 98
+[28-Jun-2019 15:25:38 UTC] PHP Parse error:  syntax error, unexpected '$services_icon_color' (T_VARIABLE) in /app/public/wp-content/themes/customizer/functions.php on line 98
