@@ -31,3 +31,24 @@ Stack trace:
 [27-Jun-2019 16:59:10 UTC] PHP Parse error:  syntax error, unexpected ''step'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /app/public/wp-content/themes/customizer/inc/customizer.php on line 126
 [27-Jun-2019 16:59:11 UTC] PHP Parse error:  syntax error, unexpected ''step'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /app/public/wp-content/themes/customizer/inc/customizer.php on line 126
 [27-Jun-2019 16:59:12 UTC] PHP Parse error:  syntax error, unexpected ''step'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /app/public/wp-content/themes/customizer/inc/customizer.php on line 126
+[28-Jun-2019 09:11:33 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 384
+[28-Jun-2019 09:30:53 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/customizer/inc/customizer.php on line 51
+[28-Jun-2019 09:31:09 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/customizer/inc/customizer.php on line 51
+[28-Jun-2019 10:11:07 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/themes/customizer/functions.php on line 107
+[28-Jun-2019 10:12:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/themes/customizer/functions.php on line 107
+[28-Jun-2019 10:12:14 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/themes/customizer/functions.php on line 107
+[28-Jun-2019 10:12:15 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/themes/customizer/functions.php on line 107
+[28-Jun-2019 10:12:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_theme_dom() in /app/public/wp-content/themes/customizer/functions.php:99
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): customizer_scripts('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /app/public/wp-includes/script-loader.php(2537): do_action('wp_enqueue_scri...')
+#4 /app/public/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#7 /app/public/wp-includes/general-template.php(2745): do_action('wp_head')
+#8 /app/public/wp-content/themes/customizer/index.php(6): wp_head()
+#9 /app/public/wp-includes/template-loader.php(78): include('/app/public/wp-...')
+#10 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#11 /app/public/index.php(17): require('/app in /app/public/wp-content/themes/customizer/functions.php on line 99

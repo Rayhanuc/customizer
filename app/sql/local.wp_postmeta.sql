@@ -1,0 +1,33 @@
+/*!40101 SET NAMES binary*/;
+/*!40014 SET FOREIGN_KEY_CHECKS=0*/;
+/*!40103 SET TIME_ZONE='+00:00' */;
+INSERT INTO `wp_postmeta` VALUES
+(1,2,"_wp_page_template","default"),
+(2,3,"_wp_page_template","default"),
+(3,5,"_edit_lock","1561632412:1"),
+(4,5,"_customize_restore_dismissed","1"),
+(5,6,"_edit_lock","1561632558:1"),
+(6,6,"_customize_restore_dismissed","1"),
+(7,7,"_wp_trash_meta_status","publish"),
+(8,7,"_wp_trash_meta_time","1561632856"),
+(9,8,"_wp_trash_meta_status","publish"),
+(10,8,"_wp_trash_meta_time","1561632885"),
+(11,9,"_edit_lock","1561636632:1"),
+(12,9,"_customize_restore_dismissed","1"),
+(13,10,"_edit_lock","1561636894:1"),
+(14,10,"_wp_trash_meta_status","publish"),
+(15,10,"_wp_trash_meta_time","1561636894"),
+(16,11,"_wp_trash_meta_status","publish"),
+(17,11,"_wp_trash_meta_time","1561636918"),
+(18,12,"_edit_lock","1561638265:1"),
+(19,12,"_customize_restore_dismissed","1"),
+(20,13,"_edit_lock","1561638793:1"),
+(21,13,"_customize_restore_dismissed","1"),
+(24,15,"_customize_changeset_uuid","f17bb2b3-8069-46fe-ab1f-f28e64882377"),
+(25,14,"_customize_restore_dismissed","1"),
+(26,16,"_edit_lock","1561654078:1"),
+(27,16,"_wp_trash_meta_status","publish"),
+(28,16,"_wp_trash_meta_time","1561654090"),
+(29,18,"_edit_lock","1561654952:1"),
+(30,18,"_customize_restore_dismissed","1"),
+(31,19,"_edit_lock","1561656288:1");

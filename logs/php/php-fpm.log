@@ -2,3 +2,7 @@
 [27-Jun-2019 08:46:09] NOTICE: ready to handle connections
 [27-Jun-2019 09:35:46] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [27-Jun-2019 09:37:00] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[27-Jun-2019 17:52:10] NOTICE: Terminating ...
+[27-Jun-2019 17:52:10] NOTICE: exiting, bye-bye!
+[28-Jun-2019 09:07:00] NOTICE: fpm is running, pid 64
+[28-Jun-2019 09:07:00] NOTICE: ready to handle connections

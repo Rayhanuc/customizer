@@ -46,6 +46,40 @@ function cust_customizer_settings($wp_customizer){
 		'type' => 'checkbox'
 	));
 
+	// For Icon color or somthing else
+	$wp_customizer->add_setting('cust_services_icon_color',array(
+		'default' => '#22bbc0',
+		'transport' => 'refresh'
+	));
+
+	$wp_customizer->add_control(new WP_Customize_Color_Control($wp_customizer,'cust_icon_color_ctrl', array(
+
+		'label' => __('Icon Color','customizer'),
+		'section' => 'cust_services',
+		'settings' => 'cust_services_icon_color',
+	)));
+
+	// How may row will be start
+	$wp_customizer->add_setting('cust_services_number_of_items',array(
+		'default' => '4',
+		'transport' => 'refresh'
+	));
+
+	$wp_customizer->add_control('cust_services_number_of_items_ctrl',array(
+		'label' => __('Number of Items','customizer'),
+		'section' => 'cust_services',
+		'settings' => 'cust_services_number_of_items',
+		'type' => 'select',
+		'choices' => array(
+			'12' => '1 in Each Row',
+			'6' => '2 in Each Row',
+			'4' => '3 in Each Row',
+			'3' => '4 in Each Row',
+		)
+	));
+
+	// How may row will be end
+
 
 	/*
 	* Other Controls
@@ -187,6 +221,58 @@ function cust_customizer_settings($wp_customizer){
 		'section' => 'cust_others',
 		'settings' => 'cust_others_html5_week',
 		'type' => 'week',
+	));
+
+	// Url 
+	$wp_customizer->add_setting('cust_others_html5_url',array(
+		'default' => 'https://facebook.com',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_url_ctrl',array(
+		'label' => __('Url Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_url',
+		'type' => 'url',
+	));
+
+	// Tel 
+	$wp_customizer->add_setting('cust_others_html5_tel',array(
+		'default' => '01815666267',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_tel_ctrl',array(
+		'label' => __('Tel Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_tel',
+		'type' => 'tel',
+	));
+
+	// Email 
+	$wp_customizer->add_setting('cust_others_html5_email',array(
+		'default' => 'rayhanctg4@gmail.com',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_email_ctrl',array(
+		'label' => __('Email Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_email',
+		'type' => 'email',
+	));
+
+	// Search 
+	$wp_customizer->add_setting('cust_others_html5_search',array(
+		// 'default' => 'choice3',
+		'transport' => 'refresh'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_others_html5_search_ctrl',array(
+		'label' => __('Search Field','customizer'),
+		'section' => 'cust_others',
+		'settings' => 'cust_others_html5_search',
+		'type' => 'search',
 	));
 
 }

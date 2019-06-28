@@ -73,12 +73,15 @@
 							?>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<?php
+					$cust_column = get_theme_mod('cust_services_number_of_items',4);
+					?>
+					<div class="col-md-<?php echo esc_attr( $cust_column ); ?> text-center">
 						<div class="service-box">
 							<div class="service-icon">
 								<div class="service-icon-table">
 									<div class="service-icon-tablecell">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/service-icon-1.png" alt="">
+										<i class="fa fa-laptop"></i>
 									</div>
 								</div>
 							</div>
@@ -87,12 +90,12 @@
 							<p>From a business perspective, it was not hard to understand why West Ham Unite found it impossible to resist.Aaron Judge, a 25-year-old Yank rookie, finally offered.</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-<?php echo esc_attr( $cust_column ); ?> text-center">
 						<div class="service-box">
 							<div class="service-icon">
 								<div class="service-icon-table">
 									<div class="service-icon-tablecell">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/service-icon-2.png" alt="">
+										<i class="fa fa-cog"></i>
 									</div>
 								</div>
 							</div>
@@ -101,12 +104,12 @@
 							<p>From a business perspective, it was not hard to understand why West Ham Unite found it impossible to resist.Aaron Judge, a 25-year-old Yank rookie, finally offered.</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-<?php echo esc_attr( $cust_column ); ?> text-center">
 						<div class="service-box">
 							<div class="service-icon">
 								<div class="service-icon-table">
 									<div class="service-icon-tablecell">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/service-icon-3.png" alt="">
+										<i class="fa fa-diamond"></i>
 									</div>
 								</div>
 							</div>
@@ -115,12 +118,12 @@
 							<p>From a business perspective, it was not hard to understand why West Ham Unite found it impossible to resist.Aaron Judge, a 25-year-old Yank rookie, finally offered.</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-<?php echo esc_attr( $cust_column ); ?> text-center">
 						<div class="service-box">
 							<div class="service-icon">
 								<div class="service-icon-table">
 									<div class="service-icon-tablecell">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/service-icon-4.png" alt="">
+										<i class="fa fa-send"></i>
 									</div>
 								</div>
 							</div>
@@ -129,12 +132,12 @@
 							<p>From a business perspective, it was not hard to understand why West Ham Unite found it impossible to resist.Aaron Judge, a 25-year-old Yank rookie, finally offered.</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-<?php echo esc_attr( $cust_column ); ?> text-center">
 						<div class="service-box">
 							<div class="service-icon">
 								<div class="service-icon-table">
 									<div class="service-icon-tablecell">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/service-icon-5.png" alt="">
+										<i class="fa fa-line-chart"></i>
 									</div>
 								</div>
 							</div>
@@ -143,12 +146,12 @@
 							<p>From a business perspective, it was not hard to understand why West Ham Unite found it impossible to resist.Aaron Judge, a 25-year-old Yank rookie, finally offered.</p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-<?php echo esc_attr( $cust_column ); ?> text-center">
 						<div class="service-box">
 							<div class="service-icon">
 								<div class="service-icon-table">
 									<div class="service-icon-tablecell">
-										<img src="<?php echo get_template_directory_uri();?>/assets/img/service-icon-6.png" alt="">
+										<i class="fa fa-gift"></i>
 									</div>
 								</div>
 							</div>

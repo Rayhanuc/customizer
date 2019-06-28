@@ -265,9 +265,12 @@ body {
     left: 0;
     top: 0;
     height: 100%;
-    color: #22bbc0;
-    font-size: 30px;
     text-align: center;
+}
+
+.service-icon i{    
+    color: #22bbc0;
+    font-size: 50px;
 }
 
 .single-service-item h3 {

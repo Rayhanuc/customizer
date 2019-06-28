@@ -93,5 +93,17 @@ function customizer_scripts() {
 	wp_enqueue_style('bootstrap-css',get_template_directory_uri().'/assets/css/bootstrap.min.css',null,'3.3.7');
 	wp_enqueue_style('font-awesome-css',get_template_directory_uri().'/assets/css/font-awesome.min.css',null,'4.7.0');
 	wp_enqueue_style('customizer-style-css',get_template_directory_uri().'/assets/css/style.css',null,'4.7.0');
+
+
+
+	$services_icon_color = get_theme_mod('cust_servides_icon_color','#22bbc0');
+	$service_style = <<<EOD
+.service-icon i{    
+    color: {$services_icon_color};
+}
+EOD;
+
+wp_add_inline_style( 'customizer-style-css', $service_style );
+
 }
 add_action('wp_enqueue_scripts','customizer_scripts');
