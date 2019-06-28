@@ -21,6 +21,7 @@ function cust_customizer_settings($wp_customizer){
 		'type' => 'text'
 	));
 
+	// SubHeading start	
 	$wp_customizer->add_setting('cust_services_subheading',array(
 		// 'default' => "Mission Statement",
 		'transport' => 'refresh'  // javascript -- postMessage
@@ -31,7 +32,14 @@ function cust_customizer_settings($wp_customizer){
 		'label' => __('Services Description','customizer'),
 		'section' => 'cust_services',
 		'settings' => 'cust_services_subheading',
-		'type' => 'textarea'
+		'type' => 'textarea',
+		// 'active_callback' => 'service_display_subheading'
+		'active_callback' => function(){
+			if (get_theme_mod('cust_services_display_subheading')==1) {
+				return true;
+			}
+			return false; // closure
+		}
 	));
 
 	$wp_customizer->add_setting('cust_services_display_subheading',array(
@@ -45,6 +53,7 @@ function cust_customizer_settings($wp_customizer){
 		'settings' => 'cust_services_display_subheading',
 		'type' => 'checkbox'
 	));
+	// SubHeading end
 
 	// For Icon color or somthing else
 	$wp_customizer->add_setting('cust_services_icon_color',array(
@@ -57,7 +66,7 @@ function cust_customizer_settings($wp_customizer){
 		'section' => 'cust_services',
 		'settings' => 'cust_services_icon_color',
 	)));
-	
+
 
 	// How may row will be start
 	$wp_customizer->add_setting('cust_services_number_of_items',array(
@@ -278,3 +287,11 @@ function cust_customizer_settings($wp_customizer){
 }
 
 add_action('customize_register', 'cust_customizer_settings');
+
+
+/*function service_display_subheading(){
+	if (get_theme_mod('cust_services_display_subheading')==1) {
+		return true;
+	}
+	return false;
+}*/
