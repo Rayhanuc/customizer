@@ -41,7 +41,7 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<h1>
-							Hello Dolly
+							<?php echo __('Hello Dolly','customizer'); ?>
 						</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quibusdam!</p>
 					</div>

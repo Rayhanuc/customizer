@@ -57,3 +57,56 @@ Stack trace:
 [28-Jun-2019 13:56:11 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/customizer/functions.php on line 124
 [28-Jun-2019 15:25:38 UTC] PHP Parse error:  syntax error, unexpected '$services_icon_color' (T_VARIABLE) in /app/public/wp-content/themes/customizer/functions.php on line 98
 [28-Jun-2019 15:25:38 UTC] PHP Parse error:  syntax error, unexpected '$services_icon_color' (T_VARIABLE) in /app/public/wp-content/themes/customizer/functions.php on line 98
+[29-Jun-2019 09:55:52 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 160
+[29-Jun-2019 12:40:41 UTC] PHP Warning:  require_once(/app/public/wp-content/themes/customizer/inc/codestar/cs.php): failed to open stream: No such file or directory in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:40:41 UTC] PHP Fatal error:  require_once(): Failed opening required '/app/public/wp-content/themes/customizer/inc/codestar/cs.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:40:42 UTC] PHP Warning:  require_once(/app/public/wp-content/themes/customizer/inc/codestar/cs.php): failed to open stream: No such file or directory in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:40:42 UTC] PHP Fatal error:  require_once(): Failed opening required '/app/public/wp-content/themes/customizer/inc/codestar/cs.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:40:44 UTC] PHP Warning:  require_once(/app/public/wp-content/themes/customizer/inc/codestar/cs.php): failed to open stream: No such file or directory in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:40:44 UTC] PHP Fatal error:  require_once(): Failed opening required '/app/public/wp-content/themes/customizer/inc/codestar/cs.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:41:08 UTC] PHP Warning:  require_once(/app/public/wp-content/themes/customizer/inc/codestar/cs.php): failed to open stream: No such file or directory in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:41:08 UTC] PHP Fatal error:  require_once(): Failed opening required '/app/public/wp-content/themes/customizer/inc/codestar/cs.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:41:14 UTC] PHP Warning:  require_once(/app/public/wp-content/themes/customizer/inc/codestar/cs.php): failed to open stream: No such file or directory in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 12:41:14 UTC] PHP Fatal error:  require_once(): Failed opening required '/app/public/wp-content/themes/customizer/inc/codestar/cs.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/customizer/functions.php on line 7
+[29-Jun-2019 13:36:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function customizer_theme_options() in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php:40
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): customizer_theme_option_init('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /app/public/wp-settings.php(525): do_action('init')
+#4 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#5 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#6 /app/public/wp-admin/admin.php(34): require_once('/app/public/wp-...')
+#7 /app/public/wp-admin/themes.php(10): require_once('/app/public/wp-...')
+#8 {main}
+  thrown in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php on line 40
+[29-Jun-2019 13:36:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function customizer_theme_options() in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php:40
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): customizer_theme_option_init('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /app/public/wp-settings.php(525): do_action('init')
+#4 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#5 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#6 /app/public/wp-admin/admin-ajax.php(22): require_once('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php on line 40
+[29-Jun-2019 13:36:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function customizer_theme_options() in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php:40
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): customizer_theme_option_init('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /app/public/wp-settings.php(525): do_action('init')
+#4 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#5 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#6 /app/public/wp-admin/admin-ajax.php(22): require_once('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php on line 40
+[29-Jun-2019 13:57:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cs_get_customize_opiton() in /app/public/wp-content/themes/customizer/page-templates/about.php:45
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(78): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/customizer/page-templates/about.php on line 45
+[29-Jun-2019 18:10:35 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in /app/public/wp-content/themes/customizer/inc/codestar/csf-customizer.php on line 133

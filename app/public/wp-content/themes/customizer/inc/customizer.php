@@ -5,7 +5,15 @@
 function cust_customizer_settings($wp_customizer){
 	$wp_customizer->add_section('cust_services',array(
 		'title' => __('Services','customizer'),
-		'priority' => '30'
+		'priority' => '30',
+		'active_callback' => function(){
+			/*if (is_page_template('page-templates/about.php')) {
+				return true;
+			}
+			return false; // closure*/
+			
+			return is_page_template('page-templates/landing.php');
+		}
 	));
 
 	$wp_customizer->add_setting('cust_services_heading',array(
@@ -283,6 +291,39 @@ function cust_customizer_settings($wp_customizer){
 		'settings' => 'cust_others_html5_search',
 		'type' => 'search',
 	));
+
+
+
+	/*
+	* About Page Controls start
+	*/
+	$wp_customizer->add_section('cust_about',array(
+		'title' => __('About Page','customizer'),
+		'priority' => '40',
+		'active_callback' => function(){
+			/*if (is_page_template('page-templates/about.php')) {
+				return true;
+			}
+			return false; // closure*/
+			
+			return is_page_template('page-templates/about.php');
+		}
+	));
+
+	$wp_customizer->add_setting('cust_about_heading',array(
+		'default' => __('About Page Heading','chustomizer'),
+		'transport' => 'postMessage'  // javascript -- postMessage
+	));
+
+	$wp_customizer->add_control('cust_about_heading_ctrl',array(
+		'label' => __('About Page Heading','customizer'),
+		'section' => 'cust_about',
+		'settings' => 'cust_about_heading',
+		'type' => 'text',
+	));
+	/*
+	* About Page Controls end
+	*/
 
 }
 

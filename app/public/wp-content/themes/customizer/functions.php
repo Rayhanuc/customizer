@@ -2,6 +2,9 @@
 
 
 require_once get_theme_file_path('/inc/customizer.php');
+// CodeStar framwork function 
+require_once get_theme_file_path( "/lib/codestarframework/cs-framework.php" );
+require_once get_theme_file_path( "/inc/codestar/csf-customizer.php" );
 
 
 
