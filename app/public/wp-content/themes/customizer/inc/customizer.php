@@ -282,7 +282,7 @@ function cust_customizer_settings($wp_customizer){
 	// Search 
 	$wp_customizer->add_setting('cust_others_html5_search',array(
 		// 'default' => 'choice3',
-		'transport' => 'refresh'  // javascript -- postMessage
+		'transport' => 'refresh'  // javascript -- postMessage / refresh
 	));
 
 	$wp_customizer->add_control('cust_others_html5_search_ctrl',array(
@@ -310,17 +310,60 @@ function cust_customizer_settings($wp_customizer){
 		}
 	));
 
-	$wp_customizer->add_setting('cust_about_heading',array(
-		'default' => __('About Page Heading','chustomizer'),
-		'transport' => 'postMessage'  // javascript -- postMessage
+	// About Display Section
+	$wp_customizer->add_setting('cust_display_about',array(
+		'default' => 1,
+		'transport' => 'postMessage'  // javascript -- postMessage / refresh
 	));
 
-	$wp_customizer->add_control('cust_about_heading_ctrl',array(
+	$wp_customizer->add_control('cust_display_about',array(
+		'label' => __('Display About Section','customizer'),
+		'section' => 'cust_about',
+		// 'settings' => 'cust_display_about',
+		'type' => 'checkbox',
+	));
+
+	// About Heading
+	$wp_customizer->add_setting('cust_about_heading',array(
+		'default' => __('About Page Heading','chustomizer'),
+		'transport' => 'postMessage'  // javascript -- postMessage / refresh
+	));
+
+	$wp_customizer->add_control('cust_about_heading',array(
 		'label' => __('About Page Heading','customizer'),
 		'section' => 'cust_about',
-		'settings' => 'cust_about_heading',
+		// 'settings' => 'cust_about_heading',
 		'type' => 'text',
 	));
+	// Selective refresh
+	$wp_customizer->selective_refresh->add_partial('about_section_heading',array(
+		'selector' => '#about-heading',
+		'settings' => 'cust_about_heading',
+		'render_callback' => function(){
+			return get_theme_mod('cust_about_heading');
+		}
+	));
+	// About Description
+	$wp_customizer->add_setting('cust_about_description',array(
+		// 'default' => __('About Page Description','chustomizer'),
+		'transport' => 'postMessage'  // javascript -- postMessage / refresh
+	));
+
+	$wp_customizer->add_control('cust_about_description',array(
+		'label' => __('About Page Description','customizer'),
+		'section' => 'cust_about',
+		// 'settings' => 'cust_about_description',
+		'type' => 'textarea',
+	));
+	// Selective refresh
+	$wp_customizer->selective_refresh->add_partial('about_section_description',array(
+		'selector' => '#about-discription',
+		'settings' => 'cust_about_description',
+		'render_callback' => function(){
+			return apply_filters('the_content',get_theme_mod('cust_about_description'));
+		}
+	));
+
 	/*
 	* About Page Controls end
 	*/

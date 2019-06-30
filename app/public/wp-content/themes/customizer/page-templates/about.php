@@ -41,16 +41,19 @@ Template Name: Customizer About
 						<div class="heading-text">
 							<h2 id="about-heading">
 								<?php
-								// echo esc_html(get_theme_mod( 'cust_about_heading',__('About Page Heading.','customizer') ));
-								echo esc_html(cs_get_customize_option('about_heading'));
+								echo esc_html(get_theme_mod( 'cust_about_heading',__('About Page Heading.','customizer') ));
+								// echo esc_html(cs_get_customize_option('about_heading'));
 								?>
 							
 							</h2>
-							<p id="about-discription">
+							<div id="about-discription">
 							<?php
-							echo esc_html(cs_get_customize_option('about_description'));
+							echo apply_filters( 'the_content', get_theme_mod('cust_about_description') );
+							// echo esc_html(cs_get_customize_option('about_description'));
+
+
 							?>
-							</p>
+							</div>
 						</div>
 					</div>
 

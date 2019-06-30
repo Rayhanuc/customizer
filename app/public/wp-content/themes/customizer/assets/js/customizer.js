@@ -9,11 +9,16 @@
 			$(".service-icon i").css("color",newvalue);
 		});
 	});
-	wp.customize('cust_about_heading',function (value){
+	/*wp.customize('cust_about_heading',function (value){
 		value.bind(function(aboutvalue){
 			$("#about-heading").html(aboutvalue);
 		});
 	});
+	wp.customize('cust_about_description',function (value){
+		value.bind(function(aboutvalue){
+			$("#about-discription").html(aboutvalue);
+		});
+	});*/
 	wp.customize('_cs_customize_options[about_heading]',function (value){
 		value.bind(function(aboutvalue){
 			$("#about-heading").html(aboutvalue);
