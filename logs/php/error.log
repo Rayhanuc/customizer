@@ -116,3 +116,29 @@ Stack trace:
 [30-Jun-2019 13:18:40 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/customizer/page-templates/about.php on line 51
 [30-Jun-2019 13:34:58 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /app/public/wp-content/themes/customizer/inc/customizer.php on line 343
 [30-Jun-2019 13:35:13 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /app/public/wp-content/themes/customizer/inc/customizer.php on line 343
+[30-Jun-2019 18:20:03 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Customize_Upload_Contro' not found in /app/public/wp-content/themes/customizer/inc/customizer.php:423
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): cust_customizer_settings(Object(WP_Customize_Manager))
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /app/public/wp-includes/class-wp-customize-manager.php(928): do_action('customize_regis...', Object(WP_Customize_Manager))
+#4 /app/public/wp-includes/class-wp-hook.php(286): WP_Customize_Manager->wp_loaded('')
+#5 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#7 /app/public/wp-settings.php(546): do_action('wp_loaded')
+#8 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#9 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#10 /app/public/wp-admin/admin-ajax.php(22): require_o in /app/public/wp-content/themes/customizer/inc/customizer.php on line 423
+[30-Jun-2019 18:20:03 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Customize_Upload_Contro' not found in /app/public/wp-content/themes/customizer/inc/customizer.php:423
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): cust_customizer_settings(Object(WP_Customize_Manager))
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /app/public/wp-includes/class-wp-customize-manager.php(928): do_action('customize_regis...', Object(WP_Customize_Manager))
+#4 /app/public/wp-includes/class-wp-hook.php(286): WP_Customize_Manager->wp_loaded('')
+#5 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /app/public/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#7 /app/public/wp-settings.php(546): do_action('wp_loaded')
+#8 /app/public/wp-config.php(76): require_once('/app/public/wp-...')
+#9 /app/public/wp-load.php(37): require_once('/app/public/wp-...')
+#10 /app/public/wp-admin/admin.php(34): require_once(' in /app/public/wp-content/themes/customizer/inc/customizer.php on line 423
