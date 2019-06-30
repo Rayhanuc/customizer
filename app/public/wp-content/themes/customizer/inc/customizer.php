@@ -368,6 +368,34 @@ function cust_customizer_settings($wp_customizer){
 	* About Page Controls end
 	*/
 
+
+
+	/*
+	* Image and upload controls
+	*/
+	$wp_customizer->add_section('image_and_upload',array(
+		'title' => __('Image and Upload','customizer'),
+		'priority' => '40',
+	));
+
+	$wp_customizer->add_setting('test_image',array(
+		'default' => __('Upload Image','chustomizer'),
+		'transport' => 'refresh'  // javascript -- postMessage / refresh
+	));
+
+	$wp_customizer->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customizer,
+           'test_logo',
+           array(
+               'label'      => __( 'Upload an Image', 'theme_name' ),
+               'section'    => 'image_and_upload',
+               'settings'   => 'test_image',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
+
 }
 
 add_action('customize_register', 'cust_customizer_settings');

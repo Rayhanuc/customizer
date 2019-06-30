@@ -37,21 +37,24 @@ Template Name: Customizer About
 		<div class="section-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-text">
-							<h2 id="about-heading">
+							<h2 class="text-center" id="about-heading">
 								<?php
 								echo esc_html(get_theme_mod( 'cust_about_heading',__('About Page Heading.','customizer') ));
 								// echo esc_html(cs_get_customize_option('about_heading'));
 								?>
 							
 							</h2>
-							<div id="about-discription">
+							<div class="text-center" id="about-discription">
 							<?php
 							echo apply_filters( 'the_content', get_theme_mod('cust_about_description') );
 							// echo esc_html(cs_get_customize_option('about_description'));
+							?>
 
-
+							<?php
+							$cust_attachment_id = attachment_url_to_postid(get_theme_mod('test_image'));
+							echo wp_get_attachment_image( $cust_attachment_id);
 							?>
 							</div>
 						</div>
