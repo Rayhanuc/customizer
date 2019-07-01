@@ -388,7 +388,7 @@ function cust_customizer_settings($wp_customizer){
            $wp_customizer,
            'test_logo',
            array(
-               'label'      => __( 'Upload an Image', 'theme_name' ),
+               'label'      => __( 'Upload an Image', 'customizer' ),
                'section'    => 'image_and_upload',
                'settings'   => 'test_image',
                'context'    => 'your_setting_context' 
@@ -407,7 +407,7 @@ function cust_customizer_settings($wp_customizer){
            $wp_customizer,
            'test_image2',
            array(
-               'label'      => __( 'Upload an Image', 'theme_name' ),
+               'label'      => __( 'Upload an Image', 'customizer' ),
                'section'    => 'image_and_upload',
            )
        )
@@ -424,8 +424,45 @@ function cust_customizer_settings($wp_customizer){
            $wp_customizer,
            'test_file1',
            array(
-               'label'      => __( 'Upload a File', 'theme_name' ),
+               'label'      => __( 'Upload a File', 'customizer' ),
                'section'    => 'image_and_upload',
+           )
+       )
+   );
+
+	// upload media Control
+	$wp_customizer->add_setting('test_file1',array(
+		'default' => __('Upload a File','chustomizer'),
+		'transport' => 'refresh'  // javascript -- postMessage / refresh
+	));
+
+	$wp_customizer->add_control(
+       new WP_Customize_Upload_Control(
+           $wp_customizer,
+           'test_file1',
+           array(
+               'label'      => __( 'Upload a File', 'customizer' ),
+               'section'    => 'image_and_upload',
+           )
+       )
+   );
+	
+	// Cropped Image Control
+	$wp_customizer->add_setting('test_image3',array(
+		'default' => __('Upload an Image','chustomizer'),
+		'transport' => 'refresh'  // javascript -- postMessage / refresh
+	));
+
+	$wp_customizer->add_control(
+       new WP_Customize_Cropped_Image_Control(
+           $wp_customizer,
+           'test_image3',
+           array(
+               'label'      => __( 'Upload an Image', 'customizer' ),
+               'section'    => 'image_and_upload',
+               // 'flex_width' => true,
+               'height' => 600,
+               'width' => 800
            )
        )
    );

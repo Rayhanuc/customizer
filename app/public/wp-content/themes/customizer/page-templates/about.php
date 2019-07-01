@@ -69,6 +69,14 @@ Template Name: Customizer About
 							// $cust_attachment_id = attachment_url_to_postid(get_theme_mod('test_file1'));
 							echo $cust_attachment_id;
 							?>
+
+							<br/>
+							<?php
+							$cust_attachment_id = get_theme_mod('test_image3');
+							// $cust_attachment_id = attachment_url_to_postid(get_theme_mod('test_file1'));
+							// echo $cust_attachment_id;
+							echo "Cropped". wp_get_attachment_image($cust_attachment_id);
+							?>
 							</div>
 						</div>
 					</div>
