@@ -16,7 +16,7 @@ Template Name: Customizer About
 
 	</head>
 
-	<body <?php body_class(  ); ?>>
+	<body id="bodyid" <?php body_class(  ); ?>>
 		
 
 		<div class="breadcromb-area breadcromb-bg-1 black-overlay">
@@ -73,9 +73,13 @@ Template Name: Customizer About
 							<br/>
 							<?php
 							$cust_attachment_id = get_theme_mod('test_image3');
-							// $cust_attachment_id = attachment_url_to_postid(get_theme_mod('test_file1'));
-							// echo $cust_attachment_id;
+							// $cust_attachment_id = attachment_url_to_postid(get_theme_mod('test_image3'));
 							echo "Cropped". wp_get_attachment_image($cust_attachment_id);
+							?>
+
+							<br/>
+							<?php
+							echo esc_html(get_theme_mod('my_setting'));
 							?>
 							</div>
 						</div>

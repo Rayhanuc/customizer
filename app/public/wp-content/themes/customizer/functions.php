@@ -2,9 +2,12 @@
 
 
 require_once get_theme_file_path('/inc/customizer.php');
+require_once get_theme_file_path('/inc/kirki.php');
 // CodeStar framwork function 
 require_once get_theme_file_path( "/lib/codestarframework/cs-framework.php" );
 require_once get_theme_file_path( "/inc/codestar/csf-customizer.php" );
+
+require_once get_theme_file_path( '/library/class-kirki-installer-section.php' );
 
 
 
