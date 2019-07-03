@@ -55,4 +55,15 @@
 	?>
 
 	<div class="site-content-contain">
+
+		<!-- Breadcrumb start -->
+		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+		    <?php
+		    if(function_exists('bcn_display'))
+		    {
+		            bcn_display();
+		    }?>
+		</div>
+		<!-- Breadcrumb end -->
+		
 		<div id="content" class="site-content">

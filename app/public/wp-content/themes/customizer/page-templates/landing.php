@@ -17,7 +17,7 @@ Template Name: Customizer Landing
 	</head>
 
 	<body <?php body_class(  ); ?>>
-		<!-- <div class="header-area header-absolute">
+		<div class="header-area header-absolute">
 			<div class="container">
 				<div class="row">
 				    <div class="col-md-2">
@@ -43,7 +43,7 @@ Template Name: Customizer Landing
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<div class="breadcromb-area breadcromb-bg-1 black-overlay">
 			<div class="container">
